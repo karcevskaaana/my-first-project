@@ -64,3 +64,55 @@ a:hover {
         text-align: center;
     }
 }
+/* ===== СТИЛИ ДЛЯ ФОТО КОШКИ ===== */
+
+.cat-photo {
+    /* Размеры */
+    width: 400px;           /* Фиксированная ширина на компьютере */
+    max-width: 90%;         /* На телефоне не больше 90% экрана */
+    height: auto;           /* Автоматическая высота (сохраняет пропорции) */
+    
+    /* Позиционирование */
+    display: block;         /* Чтобы margin: auto работал */
+    margin: 30px auto;      /* Центрирование + отступы сверху/снизу */
+    
+    /* Внешний вид */
+    border-radius: 20px;    /* Закруглённые углы */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Тень вокруг фото */
+    border: 8px solid white; /* Белая толстая рамка */
+    
+    /* Эффекты */
+    transition: all 0.3s ease; /* Плавные анимации */
+}
+
+/* Эффект при наведении на фото */
+.cat-photo:hover {
+    transform: scale(1.03);     /* Увеличение при наведении */
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3); /* Усиленная тень */
+}
+
+/* ===== АДАПТИВНОСТЬ ДЛЯ ТЕЛЕФОНОВ ===== */
+
+@media (max-width: 600px) {
+    .cat-photo {
+        width: 300px;           /* Меньше на телефоне */
+        max-width: 95%;         /* Почти на весь экран */
+        margin: 20px auto;      /* Меньшие отступы */
+        border-width: 5px;      /* Тоньше рамка */
+    }
+}
+
+/* ===== ДОПОЛНИТЕЛЬНО: Анимация "мурлыкания" ===== */
+
+@keyframes purr {
+    0% { transform: rotate(0deg) scale(1); }
+    25% { transform: rotate(0.5deg) scale(1.01); }
+    50% { transform: rotate(-0.5deg) scale(1); }
+    75% { transform: rotate(0.5deg) scale(1.01); }
+    100% { transform: rotate(0deg) scale(1); }
+}
+
+/* Класс для анимации (будет добавляться JavaScript) */
+.cat-purring {
+    animation: purr 0.5s ease-in-out 3; /* 3 раза повторяется */
+}
