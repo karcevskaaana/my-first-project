@@ -1,0 +1,66 @@
+/* Основные стили для всего сайта */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Заголовок */
+.main-title {
+    color: #2c3e50;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Абзацы */
+p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Ссылка (будущая кнопка) */
+a {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: 2px solid #3498db;
+}
+
+a:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Для мобильных устройств */
+@media (max-width: 600px) {
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    body {
+        padding: 15px;
+    }
+    
+    a {
+        width: 100%;
+        text-align: center;
+    }
+}
