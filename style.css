@@ -1,7 +1,7 @@
 /* Основные стили для всего сайта */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
+    background-color: #fff0f5;
     color: #333;
     line-height: 1.6;
     margin: 0;
@@ -12,7 +12,7 @@ body {
 
 /* Заголовок */
 .main-title {
-    color: #2c3e50;
+    color: #ff0000;
     text-align: center;
     font-size: 2.5rem;
     margin-top: 40px;
