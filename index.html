@@ -9,19 +9,19 @@
     <p>Это мой первый проект на GitHub.</p>
     
     <!-- Фото кошки -->
-    <img src="https://placekitten.com/400/300" alt="Моя кошка" class="cat-photo">
+    <img src="mt-cat.jpg" alt="Моя кошка" class="cat-photo">
     <p>А это моя кошка! 🐱</p>
     
     <!-- Кнопка -->
-    <button class="fun-button">Погладить кошку 🐾</button>
+    <button class="fun-button">Погладить Соньку 🐾</button>
     <p id="message" class="hidden-message"></p>
 
     <script>
     document.querySelector('.fun-button').addEventListener('click', function() {
         const messages = [
-            "Кошка мурлычет от удовольствия! 🐱💖",
-            "Вы только что сделали кошку счастливой! 😸",
-            "Кошка говорит: 'Спасибо за поглаживание!' 🐾"
+            "Сонька мурлычет от удовольствия! 🐱💖",
+            "Вы только что сделали Соню счастливой! 😸",
+            "Сонечка говорит: 'Спасибо за поглаживание!' 🐾"
         ];
         const randomMessage = messages[Math.floor(Math.random() * messages.length)];
         const messageElement = document.getElementById('message');
