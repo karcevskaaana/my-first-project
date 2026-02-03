@@ -1,4 +1,4 @@
-/* Основные стили для всего сайта */
+/* Основные стили */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #fff0f5;
@@ -8,111 +8,87 @@ body {
     padding: 20px;
     max-width: 800px;
     margin: 0 auto;
+    text-align: center;
 }
 
 /* Заголовок */
 .main-title {
     color: #ff0000;
-    text-align: center;
     font-size: 2.5rem;
-    margin-top: 40px;
-    margin-bottom: 30px;
+    margin: 40px 0 30px;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 /* Абзацы */
 p {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-    padding: 10px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    font-size: 1.2rem;
+    margin: 20px auto;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    max-width: 600px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
 }
 
-/* Ссылка (будущая кнопка) */
-a {
-    display: inline-block;
-    background-color: #3498db;
+/* Фото кошки */
+.cat-photo {
+    width: 400px;
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border: 8px solid white;
+    transition: transform 0.3s ease;
+}
+
+.cat-photo:hover {
+    transform: scale(1.03);
+}
+
+/* Кнопка */
+.fun-button {
+    background: linear-gradient(45deg, #ff6b6b, #ffa36c);
     color: white;
-    text-decoration: none;
-    padding: 12px 25px;
-    border-radius: 5px;
-    font-weight: bold;
+    border: none;
+    padding: 15px 35px;
+    font-size: 1.3rem;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 30px auto;
+    display: block;
     transition: all 0.3s ease;
-    border: 2px solid #3498db;
+    box-shadow: 0 5px 15px rgba(255,107,107,0.3);
 }
 
-a:hover {
-    background-color: #2980b9;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+.fun-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255,107,107,0.4);
 }
 
-/* Для мобильных устройств */
+/* Сообщение */
+.hidden-message {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    background: #e8f4fc;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 500px;
+    border-left: 5px solid #3498db;
+}
+
+.show-message {
+    opacity: 1 !important;
+}
+
+/* Мобильная версия */
 @media (max-width: 600px) {
+    .cat-photo {
+        width: 300px;
+    }
     .main-title {
         font-size: 2rem;
     }
-    
-    body {
-        padding: 15px;
-    }
-    
-    a {
-        width: 100%;
-        text-align: center;
-    }
-}
-/* ===== СТИЛИ ДЛЯ ФОТО КОШКИ ===== */
-
-.cat-photo {
-    /* Размеры */
-    width: 400px;           /* Фиксированная ширина на компьютере */
-    max-width: 90%;         /* На телефоне не больше 90% экрана */
-    height: auto;           /* Автоматическая высота (сохраняет пропорции) */
-    
-    /* Позиционирование */
-    display: block;         /* Чтобы margin: auto работал */
-    margin: 30px auto;      /* Центрирование + отступы сверху/снизу */
-    
-    /* Внешний вид */
-    border-radius: 20px;    /* Закруглённые углы */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Тень вокруг фото */
-    border: 8px solid white; /* Белая толстая рамка */
-    
-    /* Эффекты */
-    transition: all 0.3s ease; /* Плавные анимации */
-}
-
-/* Эффект при наведении на фото */
-.cat-photo:hover {
-    transform: scale(1.03);     /* Увеличение при наведении */
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3); /* Усиленная тень */
-}
-
-/* ===== АДАПТИВНОСТЬ ДЛЯ ТЕЛЕФОНОВ ===== */
-
-@media (max-width: 600px) {
-    .cat-photo {
-        width: 300px;           /* Меньше на телефоне */
-        max-width: 95%;         /* Почти на весь экран */
-        margin: 20px auto;      /* Меньшие отступы */
-        border-width: 5px;      /* Тоньше рамка */
-    }
-}
-
-/* ===== ДОПОЛНИТЕЛЬНО: Анимация "мурлыкания" ===== */
-
-@keyframes purr {
-    0% { transform: rotate(0deg) scale(1); }
-    25% { transform: rotate(0.5deg) scale(1.01); }
-    50% { transform: rotate(-0.5deg) scale(1); }
-    75% { transform: rotate(0.5deg) scale(1.01); }
-    100% { transform: rotate(0deg) scale(1); }
-}
-
-/* Класс для анимации (будет добавляться JavaScript) */
-.cat-purring {
-    animation: purr 0.5s ease-in-out 3; /* 3 раза повторяется */
 }
