@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Мой первый проект</title>
+    <title>Мой сайт с кошкой</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1 class="main-title">Добро пожаловать на мой сайт!</h1>
     <p>Это мой первый проект на GitHub.</p>
-    <!-- Здесь потом добавим кошку -->
-    <img src="my-cat.jpg" alt="Моя кошка" class="cat-photo">
-    <p><a href="#">А здесь будет кнопка</a></p>
+    
+    <!-- Фото кошки -->
+    <img src="https://placekitten.com/400/300" alt="Моя кошка" class="cat-photo">
+    <p>А это моя кошка! 🐱</p>
+    
+    <!-- Кнопка -->
+    <button class="fun-button">Погладить кошку 🐾</button>
+    <p id="message" class="hidden-message"></p>
+
+    <script>
+    document.querySelector('.fun-button').addEventListener('click', function() {
+        const messages = [
+            "Кошка мурлычет от удовольствия! 🐱💖",
+            "Вы только что сделали кошку счастливой! 😸",
+            "Кошка говорит: 'Спасибо за поглаживание!' 🐾"
+        ];
+        const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+        const messageElement = document.getElementById('message');
+        
+        messageElement.textContent = randomMessage;
+        messageElement.classList.add('show-message');
+        
+        setTimeout(() => {
+            messageElement.classList.remove('show-message');
+        }, 3000);
+    });
+    </script>
 </body>
 </html>
