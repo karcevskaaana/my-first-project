@@ -92,11 +92,38 @@ p {
         font-size: 2rem;
     }
 }
+/* ===== ФУТЕР (подвал сайта) ===== */
 footer {
-    margin-top: 50px;
-    padding: 20px;
-    background: #2c3e50;
-    color: white;
+    background: #2c3e50;           /* Тёмно-синий фон */
+    color: white;                  /* Белый текст */
+    padding: 25px;
     text-align: center;
-    border-radius: 10px 10px 0 0;
+    margin-top: 50px;
+    border-radius: 15px 15px 0 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Стили для текста ВНУТРИ футера */
+footer p {
+    color: white !important;       /* Точно белый! */
+    margin: 10px 0;
+}
+
+/* Стили для ссылок внутри футера */
+footer a {
+    color: #ffcc00 !important;     /* Жёлтые ссылки */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Адаптивность для телефона */
+@media (max-width: 600px) {
+    footer {
+        padding: 20px 15px;
+        font-size: 14px;
+    }
 }
